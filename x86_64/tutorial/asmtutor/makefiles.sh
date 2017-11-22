@@ -18,4 +18,7 @@ ld -m elf_i386 05-functions.o -o out_05-functions
 nasm -f elf32 -g -Fdwarf 05-helloworld-inc.asm
 ld -m elf_i386 05-helloworld-inc.o -o out_05-helloworld-inc
 
+nasm -f elf32 -g -Fdwarf 06-helloworld-inc.asm
+ld -m elf_i386 06-helloworld-inc.o -o out_06-helloworld-inc
+
 rm -f *.o

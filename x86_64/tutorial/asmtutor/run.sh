@@ -21,3 +21,8 @@ echo -e ""
 echo -e "Lesson 05 | External include files"
 echo -e "------------------------------------------------------------"
 ./out_05-helloworld-inc
+
+echo -e ""
+echo -e "Lesson 06 | NULL terminating bytes"
+echo -e "------------------------------------------------------------"
+./out_06-helloworld-inc
