@@ -11,7 +11,7 @@
 ; This program calculates all terms of the Fibonacci series
 ; up to maxTerms (a programmer-alterable constant).  The Fibonacci
 ; series' first two terms F(1) and F(2) are both equal to one.  Each
-; term thereafter is simply the sum of the previous two terms.  This 
+; term thereafter is simply the sum of the previous two terms.  This
 ; program uses two arrays, num1 and num2 to represent two successive
 ; terms of the series.  Each array contains the ASCII representation
 ; of the number including leading zeroes.  This is done to speed the
@@ -20,7 +20,7 @@
 ; converting to ASCII each time.
 ;
 ;****************************************************************************
-; assemble using nasm, and link with ld:   
+; assemble using nasm, and link with ld:
 ;
 ; nasm -o fibo-linux.o -f elf fibo-linux.asm
 ; ld -s -o fibo-linux fibo-linux.o
@@ -28,30 +28,30 @@
 ;****************************************************************************
 ; Alterable Constant
 ;****************************************************************************
-; You can adjust this upward but be aware that the file size grows very 
-; large very quickly.  The 150000th term of the Fibonacci sequence is 
-; 31348 digits long, and the file containing all 150000 terms is 2.2G. 
-; 
+; You can adjust this upward but be aware that the file size grows very
+; large very quickly.  The 150000th term of the Fibonacci sequence is
+; 31348 digits long, and the file containing all 150000 terms is 2.2G.
+;
 	maxTerms    equ 50000 ; number of terms of the series to calculate
 
 ;****************************************************************************
 ; Number digits to use.  This is based on a little bit of tricky math.
 ; One way to calculate F(n) (i.e. the nth term of the Fibonacci seeries)
 ; is to use the equation int(phi^n/sqrt(5)) where ^ means exponentiation
-; and phi = (1 + sqrt(5))/2, the "golden number" which is a constant about 
-; equal to 1.618.  To get the number of decimal digits, we just take the 
-; base ten log of this number.  We can very easily see how to get the 
-; base phi log of F(n) -- it's just n*lp(phi)+lp(sqrt(5)), where lp means 
-; a base phi log.  To get the base ten log of this we just divide by the 
+; and phi = (1 + sqrt(5))/2, the "golden number" which is a constant about
+; equal to 1.618.  To get the number of decimal digits, we just take the
+; base ten log of this number.  We can very easily see how to get the
+; base phi log of F(n) -- it's just n*lp(phi)+lp(sqrt(5)), where lp means
+; a base phi log.  To get the base ten log of this we just divide by the
 ; base ten log of phi.  If we work through all that math, we get:
 ;
 ; digits = terms * log(phi) + log(sqrt(5))/log(phi)
 ;
-; The constants below are slightly high to assure that we always have 
+; The constants below are slightly high to assure that we always have
 ; enough room.  As mentioned above the 150000th term has 31348 digits,
 ; but this formula gives 31351.  Not too much waste there.
 ;
-        digits	    equ (maxTerms*209+1673)/1000	
+        digits	    equ (maxTerms*209+1673)/1000
 
 ; This is just the number of digits for the term counter.  In theory this
 ; could be altered, but unless you want to spend many gigabytes on the
@@ -62,18 +62,18 @@ section .text
     global _start
 ;****************************************************************************
 ;****************************************************************************
-_start:	
+_start:
 ; initializes the two numbers and the counter.  Note that this assumes
 ; that num1 and num2 areas are contiguous!
 ;
 	mov	eax,'0000'		; initialize to all ASCII zeroes
-	mov	edi,num1		; 
+	mov	edi,num1		;
 	mov	ecx,1+digits/2	; four bytes at a time and one extra
 	cld			; initialize from low to high memory
 	rep	stosd		; write the data
 	inc	eax		; make sure ASCII zero is in al
 	mov	[num2 + digits - 1],al ; last digit is one
-	mov	[counter + cntDigits - 1],al ; 
+	mov	[counter + cntDigits - 1],al ;
 	mov	dword [msg2],middle
 
 	mov	ebp,[msd2]
@@ -83,7 +83,7 @@ _start:
 	; add num2 to num1
 	mov	edi,num1+digits-1
 	mov	esi,num2+digits-1
-	mov	ecx,digits	; 
+	mov	ecx,digits	;
 	mov	ebp,[msd1]	;
 	call	AddNumbers	; num1 += num2
 	mov	[msd1],ebp	;
@@ -117,7 +117,7 @@ _start:
 ;****************************************************************************
 ;
 ; PrintLine
-; prints a single line of output containing one term of the 
+; prints a single line of output containing one term of the
 ; Fibonacci sequence.  The first few lines look like this:
 ;
 ; Fibonacci(1): 1
@@ -133,7 +133,7 @@ _start:
 PrintLine:
 	push	ebx
 	mov	ecx,eol		; print combined CRLF and msg1
-	mov	edx,msg1len+eollen   ; 
+	mov	edx,msg1len+eollen   ;
 	call	PrintString	;
 
 	mov	edi,counter	; print counter and msg2
@@ -148,7 +148,7 @@ PrintLine:
 
 ;****************************************************************************
 ;
-; PrintNumericString 
+; PrintNumericString
 ; prints the numeric string at DS:EDI, suppressing leading zeroes
 ; max length is ECX
 ;
@@ -169,8 +169,8 @@ PrintNumericString:
 	; deliberately fall through to PrintString
 
 ;****************************************************************************
-; 
-; PrintString 
+;
+; PrintString
 ; prints the string at ECX with length EDX to stdout
 ;
 ; INPUT:     ds:ecx ==> string, edx = string length
@@ -188,7 +188,7 @@ PrintString:
 ;
 ; AddNumbers
 ; add number 2 at ds:esi to number 1 at es:edi of width ecx
-; 
+;
 ;
 ; INPUT:     es:edi ==> number1, ds:esi ==> number2, ecx= max width
 ;		ds:ebp ==> msd of number 1
@@ -197,7 +197,7 @@ PrintString:
 ;
 ;****************************************************************************
 AddNumbers:
-	dec	ebp		; 
+	dec	ebp		;
 	std			; go from LSB to MSB
 	clc			;
 	pushf			; save carry flag
@@ -216,14 +216,14 @@ AddNumbers:
 	cmp	edi,ebp		; are we at a new significant digit?
 	loopnz	.top		; keep going until we've got them all
 	cmp	al,'0'		; is it a zero?
-	jnz	.done		; yes, so keep 
+	jnz	.done		; yes, so keep
 	inc	ebp		;
 .done
 	popf			; recall carry flag
 	ret			;
 
 ;****************************************************************************
-; 
+;
 ; IncrementCount
 ; increments a multidigit term counter by one
 ;
@@ -250,7 +250,7 @@ IncrementCount:
 	loop	.top		;
 	popf			; recall carry flag
 	ret			;
-	
+
 ;****************************************************************************
 ;
 ; CRLF
@@ -289,4 +289,3 @@ msd2 dd num2+digits-1		; pointer to most significant digit of num2
 num1 times digits db 0
 num2 times digits db 0
 overrun times 4 db 0		; extra space to assure we don't overwrite
-

@@ -1,6 +1,5 @@
-; nasm -felf64 -o x fibonacci.asm && ld -o out_fibonacci_dynamic_linker x -lc --dynamic-linker /lib64/ld-linux-x86-64.so.2 && rm -f x && ./out_fibonacci_dynamic_linker
-
 ; http://koblents.com/Ches/Original-Work/Month-Aug-2013/1-X86-64-ASM-Fibonacci/
+
 section .text           ; program test
     global  _start      ; _start is default; export for linker
     extern  printf
@@ -23,6 +22,7 @@ do_fib:             ; do_fib sub/func
 for_0_r15:
     push    rcx     ; store rcx
     mov rcx, 0      ; set rcx counter to 0
+
 for_loop:
     call    r13     ; call function pointer
     inc rcx     ; increment counter
@@ -63,8 +63,8 @@ print_int:
     mov rsi, r14    ; value stored in r14
     mov rdi, r15    ; string stored in r15
     mov eax, 0      ; no non-int args
-    call    printf      ; call printf
-    pop r13     ; pop all the registers
+    call printf     ; call printf
+    pop r13         ; pop all the registers
     pop r12
     pop r11
     pop r10
@@ -82,7 +82,4 @@ print_int:
 
 
 section .data           ; program data
-
-ctr db  "Count: %d", 10, 0  ; count string
 fib db  "%lld", 10, 0    ; fib string
-dbg db  "Value: %d", 10, 0  ; debug string

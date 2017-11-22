@@ -1,6 +1,5 @@
-; nasm -f elf64 -o x fib.asm && ld -arch x86_64 x -o out_fib_arch_x86_64 && rm -f x  && ./out_fib_arch_x86_64
-
 ; http://seyferseed.ru/en/life-en/recursive-fibonacci-solution-different-programming-languages.html#sthash.xPHRjius.Zavnit6o.dpbs
+
 DEFAULT rel
 
 section .text
