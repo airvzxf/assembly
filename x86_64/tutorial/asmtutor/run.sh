@@ -16,3 +16,8 @@ echo -e ""
 echo -e "Lesson 04 | Subroutines"
 echo -e "------------------------------------------------------------"
 ./out_04-subroutines
+
+echo -e ""
+echo -e "Lesson 05 | External include files"
+echo -e "------------------------------------------------------------"
+./out_05-helloworld-inc
