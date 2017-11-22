@@ -26,3 +26,8 @@ echo -e ""
 echo -e "Lesson 06 | NULL terminating bytes"
 echo -e "------------------------------------------------------------"
 ./out_06-helloworld-inc
+
+echo -e ""
+echo -e "Lesson 07 | Linefeeds"
+echo -e "------------------------------------------------------------"
+./out_07-helloworld-lf
