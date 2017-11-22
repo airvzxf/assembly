@@ -5,7 +5,7 @@
 echo -e ""
 echo -e "Lesson 02 | Hello world!"
 echo -e "------------------------------------------------------------"
-./out_02-hello-world
+./out_02-helloworld
 
 echo -e ""
 echo -e "Lesson 03 | Calculate string length"

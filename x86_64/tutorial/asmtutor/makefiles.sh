@@ -3,8 +3,8 @@
 rm -f *.o
 rm -f out_*
 
-nasm -f elf32 -g -Fdwarf 02-hello-world.asm
-ld -m elf_i386 02-hello-world.o -o out_02-hello-world
+nasm -f elf32 -g -Fdwarf 02-helloworld.asm
+ld -m elf_i386 02-helloworld.o -o out_02-helloworld
 
 nasm -f elf32 -g -Fdwarf 03-helloworld-len.asm
 ld -m elf_i386 03-helloworld-len.o -o out_03-helloworld-len
