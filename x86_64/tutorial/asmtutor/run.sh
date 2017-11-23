@@ -31,3 +31,8 @@ echo -e ""
 echo -e "Lesson 07 | Linefeeds"
 echo -e "------------------------------------------------------------"
 ./out_07-helloworld-lf
+
+echo -e ""
+echo -e "Lesson 08 | Passing arguments"
+echo -e "------------------------------------------------------------"
+./out_08-helloworld-args "This is one argument" "This is another" 101
