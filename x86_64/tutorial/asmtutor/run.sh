@@ -36,3 +36,8 @@ echo -e ""
 echo -e "Lesson 08 | Passing arguments"
 echo -e "------------------------------------------------------------"
 ./out_08-helloworld-args "This is one argument" "This is another" 101
+
+echo -e ""
+echo -e "Lesson 09 | User input"
+echo -e "------------------------------------------------------------"
+./out_09-helloworld-input
