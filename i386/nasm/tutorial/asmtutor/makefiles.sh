@@ -30,4 +30,7 @@ ld -m elf_i386 09-helloworld-input.o -o out_09-helloworld-input
 nasm -f elf32 -g -Fdwarf 10-helloworld-10.asm
 ld -m elf_i386 10-helloworld-10.o -o out_10-helloworld-10
 
+nasm -f elf32 -g -Fdwarf 11-helloworld-itoa.asm
+ld -m elf_i386 11-helloworld-itoa.o -o out_11-helloworld-itoa
+
 rm -f *.o

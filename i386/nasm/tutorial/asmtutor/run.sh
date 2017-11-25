@@ -46,3 +46,8 @@ echo -e ""
 echo -e "Lesson 10 | Count to 10"
 echo -e "------------------------------------------------------------"
 ./out_10-helloworld-10
+
+echo -e ""
+echo -e "Lesson 11 | Count to 10 (itoa)"
+echo -e "------------------------------------------------------------"
+./out_11-helloworld-itoa
