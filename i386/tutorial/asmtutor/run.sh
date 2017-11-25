@@ -40,4 +40,9 @@ echo -e "------------------------------------------------------------"
 echo -e ""
 echo -e "Lesson 09 | User input"
 echo -e "------------------------------------------------------------"
-./out_09-helloworld-input
+echo "Mr. Robot" | ./out_09-helloworld-input
+
+echo -e ""
+echo -e "Lesson 10 | Count to 10"
+echo -e "------------------------------------------------------------"
+./out_10-helloworld-10
