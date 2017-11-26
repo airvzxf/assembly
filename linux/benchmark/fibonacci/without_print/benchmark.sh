@@ -29,6 +29,20 @@ echo -e "----------------------------------------------------------------------"
 time for i in {1..1000}; do ./out_fib_i386_nasm_my_solution; done
 
 echo -e "\n"
+echo -e "out_fib_x64_nasm_my_solution (46 numbers) x 1,000 repetitions | NASM"
+echo -e "----------------------------------------------------------------------"
+#time ./out_fib_x64_nasm_my_solution
+#time ./out_fib_x64_nasm_my_solution
+time for i in {1..1000}; do ./out_fib_x64_nasm_my_solution; done
+
+echo -e "\n"
+echo -e "out_fib_x64_fasm_my_solution (46 numbers) x 1,000 repetitions | FASM"
+echo -e "----------------------------------------------------------------------"
+#time ./out_fib_x64_fasm_my_solution
+#time ./out_fib_x64_fasm_my_solution
+time for i in {1..1000}; do ./out_fib_x64_fasm_my_solution; done
+
+echo -e "\n"
 echo -e "The scripts which accoumulate the results and at the end
 shows the final number, they are he slow scripts
 which needs improvments."
