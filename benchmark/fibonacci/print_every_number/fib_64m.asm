@@ -7,7 +7,7 @@
 d:  resq    1       ; temp  unused, kept in register rdx
 
     section .data
-c:  dq  91      ; loop counter
+c:  dq  46      ; loop counter
 a:  dq  1       ; current number, becomes next
 b:  dq  2       ; next number, becomes sum a+b
 format: db '%lld', 10, 0

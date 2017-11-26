@@ -24,6 +24,10 @@ nasm -f elf64 -g -Fdwarf fib_64slow.asm -o x
 ld -arch x86_64 x -o out_fib_64slow_x86_64
 rm -f x
 
+nasm -f elf32 -g -Fdwarf fib_my_solution.asm -o x
+ld -m elf_i386 x -o out_fib_my_solution
+rm -f x
+
 fasm fib_F64a.asm out_fib_F64a
 
 # --------------------------------------------------------------------

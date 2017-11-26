@@ -8,7 +8,7 @@ format: db '%lld', 10, 0
 
     section .text
 _start:
-    mov rcx, 91         ; rcx will countdown from xx to 0
+    mov rcx, 46         ; rcx will countdown from xx to 0
     mov rax, 1      ; rax will hold the current number
     mov rbx, 2      ; rbx will hold the next number
 

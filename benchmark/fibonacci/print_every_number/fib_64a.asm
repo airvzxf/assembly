@@ -37,7 +37,7 @@ _start:             ; _start (default start point) sub/func
     mov r11, 1      ; second initial value: 1
 
     mov r13, do_fib ; execute do_fib in loop
-    mov r15, 92     ; execute xx times
+    mov r15, 47     ; execute xx times
     call    for_0_r15   ; call for loop
 
                 ; next section is exit routine
