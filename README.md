@@ -4,6 +4,14 @@ Some scripts about assembly in Linux
 
 ---
 
-[Linux 64 bits](https://github.com/airvzxf/assembly-in-linux/tree/master/x86_64):
+[Linux](https://github.com/airvzxf/assembly/tree/master/linux):
 
-- [Fibonacci](https://github.com/airvzxf/assembly-in-linux/tree/master/x86_64/fibonacci). In mathematics, the Fibonacci numbers are the numbers in the following integer sequence.
+- Benchmarks.
+
+  - [Fibonacci](https://github.com/airvzxf/assembly/tree/master/linux/benchmark/fibonacci). In mathematics, the Fibonacci numbers are the numbers in the following integer sequence.
+
+- Tutorials.
+
+  - i386.
+
+    - [ASM Tutor](https://github.com/airvzxf/assembly/tree/master/linux/i386/nasm/tutorial/asmtutor) A very good NASM tutorial, needs more explanation but it's fine for a general purpose and start to do your first codes.
