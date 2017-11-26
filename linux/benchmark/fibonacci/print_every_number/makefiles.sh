@@ -34,11 +34,10 @@ fasm fib_x64_fasm_a.asm out_fib_x64_fasm_a
 # TODO's
 # --------------------------------------------------------------------
 
-# TODO: #1 - Create the out_fib_x64_nasm_a version without printf.
-# nasm -f elf64 -g -Fdwarf fib_x64_nasm_a_without_printf.asm -o x
-# ld -m elf_x86_64 x -o out_fib_x64_nasm_a_without_printf
+# TODO: #1 - Create my solution for version 64-bits.
 
-# TODO: #2 - Fixed the FASM version of out_fib_x64_nasm_a
-# fasm fib_F64b.asm out_fib_F64b
+# TODO: #2 - Create my solution with FASM.
 
-# TODO: #3 - Fixed the ASM fib_linux.asm.
+# TODO: #3 - Create the C version with different optimizations.
+
+# TODO: #4 - Create README.md with the results.
