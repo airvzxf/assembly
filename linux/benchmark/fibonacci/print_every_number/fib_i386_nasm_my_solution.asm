@@ -1,6 +1,6 @@
 ; This is my solution (Israel Roldan)
 
-%include 'fib_my_functions.asm'
+%include 'fib_i386_nasm_my_functions.asm'
 
 SECTION .text
     global  _start
@@ -13,10 +13,12 @@ _start:
 
 Infinite:
     add     edx, eax    ; Fibonacci = lastn number + current
+
     push    eax         ; Save the value for EAX
     mov     eax, edx    ; EAX = EDX
     call    iprintLF    ; Print the number
     pop     eax         ; Restore the value for EAX
+
     mov     eax, ebx    ; Current = Next number (old number)
     mov     ebx, edx    ; Next = fibonacci number
 
