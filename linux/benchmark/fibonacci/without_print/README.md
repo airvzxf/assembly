@@ -80,7 +80,7 @@ sys     0.198s <br>
 
 ---
 
-out_fib_x64_c (46 numbers) x 1,000 repetitions | NASM
+out_fib_x64_c (46 numbers) x 1,000 repetitions | C
 
 real    0.826s <br>
 user    0.575s <br>
