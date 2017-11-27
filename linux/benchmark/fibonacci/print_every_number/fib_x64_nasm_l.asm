@@ -21,7 +21,7 @@ print:
     mov rdi, format     ; arg 1 is a pointer
     mov rsi, rax        ; arg 2 is the current number
     mov eax, 0      ; no vector registers in use
-    ;call printf    ; Does not print every time insted finish the loop.
+    call printf    ; Does not print every time insted finish the loop.
     pop rcx
     pop rax
     mov rdx, rax        ; save the current number
@@ -29,7 +29,6 @@ print:
     add rbx, rdx        ; get the new next number
     dec rcx         ; count down
     jnz print       ; if not done counting, do some more
-    call printf     ; print the final result
 
     pop rbp         ; restore stack
     mov rax, 0      ; normal exit

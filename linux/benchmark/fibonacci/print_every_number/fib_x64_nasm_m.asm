@@ -20,7 +20,7 @@ print:
     mov rdi, format     ; arg 1 is a pointer
     mov rsi,[a]         ; arg 2 is the current number
     mov rax, 0      ; no vector registers in use
-    ;call printf    ; Does not print every time insted finish the loop.
+    call printf    ; Does not print every time insted finish the loop.
 
     mov rdx,[a]         ; save the current number, in register
     mov rbx,[b]         ;
@@ -31,7 +31,6 @@ print:
     dec rcx         ; count down
     mov [c],rcx     ; save in ram
     jnz print       ; if not done counting, do some more
-    call printf     ; print the final result
 
     pop rbp         ; restore stack
     mov rax, 0      ; normal exit
