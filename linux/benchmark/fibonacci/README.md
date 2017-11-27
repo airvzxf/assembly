@@ -12,14 +12,12 @@ and
 [without_print](https://github.com/airvzxf/assembly/blob/master/linux/benchmark/fibonacci/without_print).
 
 
-Let's talk about the file size.
-
+Let's talk about the file size. <br>
 FASM is the really winner with 176B vs the next app smaller
 with 1.4KB.
 
 
-Let's talk aobut compilers.
-
+Let's talk aobut compilers. <br>
 If you don't use the printf call these three are exactly the same,
 not improvements in performance and file size.
 
