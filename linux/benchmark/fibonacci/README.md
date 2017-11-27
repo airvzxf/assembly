@@ -27,7 +27,8 @@ not improvements in performance and file size.
 
 `ld --oformat elf64-x86-64` Convert the output format to ELF 64-bits.
 
-`ld x -lc --dynamic-linker /lib64/ld-linux-x86-64.so.2` Use it if you call the printf extension.
+`ld x -lc --dynamic-linker /lib64/ld-linux-x86-64.so.2` Use it if you
+call the printf extension.
 
 ---
 
