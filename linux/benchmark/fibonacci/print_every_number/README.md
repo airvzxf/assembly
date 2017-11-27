@@ -32,40 +32,40 @@ this benchmark repeats this operation 1,000 times.
 
 out_fib_i386_nasm_my_solution (46 numbers) x 1,000 repetitions | NASM
 
-real    0.758s
-user    0.577s
-sys     0.246s
+real    0.758s <br>
+user    0.577s <br>
+sys     0.246s <br>
 
 ---
 
 out_fib_x64_nasm_a (46 numbers) x 1,000 repetitions | NASM
 
-real    1.030s
-user    0.712s
-sys     0.400s
+real    1.030s <br>
+user    0.712s <br>
+sys     0.400s <br>
 
 ---
 
 out_fib_x64_nasm_l (46 numbers) x 1,000 repetitions | NASM
 
-real    1.082s
-user    0.752s
-sys     0.423s
+real    1.082s <br>
+user    0.752s <br>
+sys     0.423s <br>
 
 ---
 
 out_fib_x64_nasm_m (46 numbers) x 1,000 repetitions | NASM
 
-real    1.073s
-user    0.753s
-sys     0.407s
+real    1.073s <br>
+user    0.753s <br>
+sys     0.407s <br>
 
 ---
 
 out_fib_x64_c (46 numbers) x 1,000 repetitions | C
 
-real    1.172s
-user    0.794s
-sys     0.475s
+real    1.172s <br>
+user    0.794s <br>
+sys     0.475s <br>
 
 ---
