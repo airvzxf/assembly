@@ -5,7 +5,7 @@ The speed for the ASM binaries are between 0.550s and 0.480s.
 The speed for the C binary is between 0.850s and 0.780s.
 
 
-## Speed time.
+## Speed time
 
 Run 46 iterations to obtain the 2,971,215,073 Fibonacci number and
 this benchmark repeats this operation 1,000 times.
