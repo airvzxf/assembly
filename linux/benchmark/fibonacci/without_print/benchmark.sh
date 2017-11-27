@@ -43,7 +43,7 @@ echo -e "----------------------------------------------------------------------"
 time for i in {1..1000}; do ./out_fib_x64_nasm_my_solution; done
 
 echo -e "\n"
-echo -e "out_fib_x64_c (46 numbers) x 1,000 repetitions | NASM"
+echo -e "out_fib_x64_c (46 numbers) x 1,000 repetitions | C"
 echo -e "----------------------------------------------------------------------"
 #time ./out_fib_x64_c
 #time ./out_fib_x64_c
