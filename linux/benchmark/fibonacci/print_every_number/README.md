@@ -4,7 +4,7 @@ The speed for my ASM binary is between ~0.750s.
 
 The speed for the ASM binaries are between 1.020s and 1.100s.
 
-The speed for the C binary is between 1.020s and 1.100s.
+The speed for the C binary is between 1.150s and 1.180s.
 
 
 ## Speed time

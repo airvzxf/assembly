@@ -29,7 +29,3 @@ gcc -m64 fib_x64_c.c -o out_fib_x64_c
 # TODO: #1 - Create my solution for version 64-bits.
 
 # TODO: #2 - Create my solution with FASM.
-
-# TODO: #3 - Create the C version with different optimizations.
-
-# TODO: #4 - Create README.md with the results.
