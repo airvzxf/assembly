@@ -14,4 +14,4 @@ Some scripts about assembly in Linux
 
   - i386.
 
-    - [ASM Tutor](https://github.com/airvzxf/assembly/tree/master/linux/i386/nasm/tutorial/asmtutor) A very good NASM tutorial, needs more explanation but it's fine for a general purpose and start to do your first codes.
+    - [ASM Tutor](https://github.com/airvzxf/assembly/tree/master/linux/i386/nasm/tutorial/asmtutor) A very good NASM tutorial, needs more explanation but it's fine for a general purpose and start to do your first codes [Official Website](https://asmtutor.com/).
