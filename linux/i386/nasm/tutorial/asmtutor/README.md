@@ -1,12 +1,14 @@
 # ASM Tutor
 
 Learn Assembly Language
+
 https://asmtutor.com/
+
 https://github.com/DGivney/assemblytutorials
 
 ---
 
-I did the exercises provide by ASM Tutor. It may contain some modifications for experimental purpose.
+I did the exercises provide by ASM Tutor, it may contain some modifications for experimental purpose.
 
 
 ## Instructions
