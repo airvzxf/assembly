@@ -3,6 +3,11 @@
 ./makefiles.sh
 
 echo -e ""
+echo -e "Lesson 01 | Hello world!"
+echo -e "------------------------------------------------------------"
+./out_01-hello
+
+echo -e ""
 echo -e "Lesson 02 | Hello world!"
 echo -e "------------------------------------------------------------"
 ./out_02-helloworld
