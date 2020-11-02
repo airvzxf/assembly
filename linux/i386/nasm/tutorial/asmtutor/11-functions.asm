@@ -99,11 +99,22 @@ sprintLF:
     call    sprint
 
     push    eax
-    mov     eax, 0AH
-    push    eax
-    mov     eax, esp
-    call    sprint
-    pop     eax
+    push    ebx
+    push    ecx
+    push    edx
+
+    mov     edx, 1
+    mov     ecx, 0Ah
+    push    ecx
+    mov     ecx, esp
+    mov     ebx, 1
+    mov     eax, 4
+    int     80h
+    pop     ecx
+
+    pop     edx
+    pop     ecx
+    pop     ebx
     pop     eax
     ret
 
