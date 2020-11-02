@@ -1,4 +1,5 @@
-; Hello World Program (External file include)
+; External include files
+; https://asmtutor.com/
 
 %include        '05-functions.asm'                          ; include our external file
 

@@ -3,6 +3,9 @@
 rm -f *.o
 rm -f out_*
 
+nasm -f elf32 -g -Fdwarf 01-hello.asm
+ld -m elf_i386 01-hello.o -o out_01-hello
+
 nasm -f elf32 -g -Fdwarf 02-helloworld.asm
 ld -m elf_i386 02-helloworld.o -o out_02-helloworld
 

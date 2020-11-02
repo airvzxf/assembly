@@ -1,4 +1,5 @@
-; Hello World Program (NULL terminating bytes)
+; NULL terminating bytes
+; https://asmtutor.com/
 
 %include        '05-functions.asm'
 

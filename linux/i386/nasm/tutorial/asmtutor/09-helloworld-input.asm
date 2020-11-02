@@ -1,4 +1,5 @@
-; Hello World Program (Getting input)
+; User input
+; https://asmtutor.com/
 
 %include        '07-functions.asm'
 
