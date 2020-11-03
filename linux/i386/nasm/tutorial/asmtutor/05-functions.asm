@@ -33,7 +33,7 @@ sprint:
     mov     ecx, eax
     mov     ebx, 1
     mov     eax, 4
-    int     80h
+    int     0x80
 
     pop     ebx
     pop     ecx
@@ -47,5 +47,5 @@ sprint:
 quit:
     mov     ebx, 0
     mov     eax, 1
-    int     80h
+    int     0x80
     ret

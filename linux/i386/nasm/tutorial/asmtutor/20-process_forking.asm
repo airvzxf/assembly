@@ -4,8 +4,8 @@
 %include        '17-functions.asm'
 
 SECTION .data
-childMsg        db      'This is the child process', 0h     ; a message string
-parentMsg       db      'This is the parent process', 0h    ; a message string
+childMsg        db      'This is the child process', 0x0     ; a message string
+parentMsg       db      'This is the parent process', 0x0    ; a message string
 
 SECTION .text
 global  _start
@@ -13,7 +13,7 @@ global  _start
 _start:
 
     mov     eax, 2              ; invoke SYS_FORK (kernel opcode 2)
-    int     80h
+    int     0x80
 
     cmp     eax, 0              ; if eax is zero we are in the child process
     jz      child               ; jump if eax is zero to child label

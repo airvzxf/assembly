@@ -33,7 +33,7 @@ sprint:
     mov     ecx, eax
     mov     ebx, 1
     mov     eax, 4
-    int     80h
+    int     0x80
 
     pop     ebx
     pop     ecx
@@ -52,13 +52,13 @@ sprintLF:
     push    ecx
     push    edx
 
-    mov     edx, 1      ; number of bytes to write - one for each letter plus 0Ah (line feed character)
-    mov     ecx, 0Ah    ; move 0Ah into eax - 0Ah is the ascii character for a linefeed
+    mov     edx, 1      ; number of bytes to write - one for each letter plus 0xA (line feed character)
+    mov     ecx, 0xA    ; move 0xA into eax - 0xA is the ascii character for a linefeed
     push    ecx         ; push the linefeed onto the stack so we can get the address
     mov     ecx, esp    ; move the address of the current stack pointer into eax for sprint
     mov     ebx, 1
     mov     eax, 4
-    int     80h
+    int     0x80
     pop     ecx         ; remove our linefeed character from the stack
 
     pop     edx
@@ -74,5 +74,5 @@ sprintLF:
 quit:
     mov     ebx, 0
     mov     eax, 1
-    int     80h
+    int     0x80
     ret

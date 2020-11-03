@@ -2,7 +2,7 @@
 ; https://asmtutor.com/
 
 SECTION .data
-msg     db      'Hello, brave new world!', 0Ah ; we can modify this now without having to update anywhere else in the program
+msg     db      'Hello, brave new world!', 0xA ; we can modify this now without having to update anywhere else in the program
 
 SECTION .text
 global  _start
@@ -29,8 +29,8 @@ finished:
     mov     ecx, msg        ; the rest of the code should be familiar now
     mov     ebx, 1
     mov     eax, 4
-    int     80h
+    int     0x80
 
     mov     ebx, 0
     mov     eax, 1
-    int     80h
+    int     0x80

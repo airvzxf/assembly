@@ -14,7 +14,7 @@ _start:
     mov     edx, 0          ; initialise our data register to store additions
 
 nextArg:
-    cmp     ecx, 0h         ; check to see if we have any arguments left
+    cmp     ecx, 0          ; check to see if we have any arguments left
     jz      noMoreArgs      ; if zero flag is set jump to noMoreArgs label (jumping over the end of the loop)
     pop     eax             ; pop the next argument off the stack
     call    atoi            ; convert our ascii string to decimal integer

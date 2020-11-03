@@ -4,8 +4,8 @@
 %include        '05-functions.asm'                          ; include our external file
 
 SECTION .data
-msg1    db      'Hello, brave new world!', 0Ah              ; our first message string
-msg2    db      'This is how we recycle in NASM.', 0Ah      ; our second message string
+msg1    db      'Hello, brave new world!', 0xA              ; our first message string
+msg2    db      'This is how we recycle in NASM.', 0xA      ; our second message string
 
 SECTION .text
 global  _start

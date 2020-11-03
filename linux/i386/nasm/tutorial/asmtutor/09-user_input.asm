@@ -4,8 +4,8 @@
 %include        '07-functions.asm'
 
 SECTION .data
-msg1        db      'Please enter your name: ', 0h      ; message string asking user for input
-msg2        db      'Hello, ', 0h                       ; message string to use after user has entered their name
+msg1        db      'Please enter your name: ', 0x0      ; message string asking user for input
+msg2        db      'Hello, ', 0x0                       ; message string to use after user has entered their name
 
 SECTION .bss
 sinput:     resb    255                                 ; reserve a 255 byte space in memory for the users input string
@@ -22,7 +22,7 @@ _start:
     mov     ecx, sinput     ; reserved space to store our input (known as a buffer)
     mov     ebx, 0          ; write to the STDIN file
     mov     eax, 3          ; invoke SYS_READ (kernel opcode 3)
-    int     80h
+    int     0x80
 
     mov     eax, msg2
     call    sprint

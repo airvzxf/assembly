@@ -40,7 +40,7 @@ iprintLF:
     call    iprint          ; call our integer printing function
 
     push    eax             ; push eax onto the stack to preserve it while we use the eax register in this function
-    mov     eax, 0Ah        ; move 0Ah into eax - 0Ah is the ascii character for a linefeed
+    mov     eax, 0xA        ; move 0xA into eax - 0xA is the ascii character for a linefeed
     push    eax             ; push the linefeed onto the stack so we can get the address
     mov     eax, esp        ; move the address of the current stack pointer into eax for sprint
     call    sprint          ; call our sprint function
@@ -84,7 +84,7 @@ sprint:
     mov     ecx, eax
     mov     ebx, 1
     mov     eax, 4
-    int     80h
+    int     0x80
 
     pop     ebx
     pop     ecx
@@ -104,12 +104,12 @@ sprintLF:
     push    edx
 
     mov     edx, 1
-    mov     ecx, 0Ah
+    mov     ecx, 0xA
     push    ecx
     mov     ecx, esp
     mov     ebx, 1
     mov     eax, 4
-    int     80h
+    int     0x80
     pop     ecx
 
     pop     edx
@@ -125,5 +125,5 @@ sprintLF:
 quit:
     mov     ebx, 0
     mov     eax, 1
-    int     80h
+    int     0x80
     ret

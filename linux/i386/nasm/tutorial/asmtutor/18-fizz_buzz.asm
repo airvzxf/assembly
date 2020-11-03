@@ -4,8 +4,8 @@
 %include        '17-functions.asm'
 
 SECTION .data
-fizz        db      'Fizz', 0h     ; a message string
-buzz        db      'Buzz', 0h     ; a message string
+fizz        db      'Fizz', 0x0     ; a message string
+buzz        db      'Buzz', 0x0     ; a message string
 
 SECTION .text
 global  _start
@@ -49,7 +49,7 @@ nextNumber:
     call    iprint          ; call our integer printing function
 
 .continue:
-    mov     eax, 0Ah        ; move an ascii linefeed character into eax
+    mov     eax, 0xA        ; move an ascii linefeed character into eax
     push    eax             ; push the address of eax onto the stack for printing
     mov     eax, esp        ; get the stack pointer (address on the stack of our linefeed char)
     call    sprint          ; call our string printing function to print a line feed

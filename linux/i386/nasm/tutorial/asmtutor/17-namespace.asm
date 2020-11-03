@@ -4,9 +4,9 @@
 %include        '17-functions.asm'
 
 SECTION .data
-msg1        db      'Jumping to finished label.', 0h        ; a message string
-msg2        db      'Inside subroutine number: ', 0h        ; a message string
-msg3        db      'Inside subroutine "finished".', 0h     ; a message string
+msg1        db      'Jumping to finished label.', 0x0        ; a message string
+msg2        db      'Inside subroutine number: ', 0x0        ; a message string
+msg3        db      'Inside subroutine "finished".', 0x0     ; a message string
 
 SECTION .text
 global  _start

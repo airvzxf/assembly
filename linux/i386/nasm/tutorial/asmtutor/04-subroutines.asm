@@ -2,7 +2,7 @@
 ; https://asmtutor.com/
 
 SECTION .data
-msg     db      'Hello, brave new world!', 0Ah
+msg     db      'Hello, brave new world!', 0xA
 
 SECTION .text
 global  _start
@@ -16,11 +16,11 @@ _start:
     mov     ecx, msg        ; this is all the same as before
     mov     ebx, 1
     mov     eax, 4
-    int     80h
+    int     0x80
 
     mov     ebx, 0
     mov     eax, 1
-    int     80h
+    int     0x80
 
 strlen:                     ; this is our first function declaration
     push    ebx             ; push the value in EBX onto the stack to preserve it while we use EBX in this function

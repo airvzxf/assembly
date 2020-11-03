@@ -4,8 +4,8 @@
 %include        '07-functions.asm'
 
 SECTION .data
-msg1    db      'Hello, brave new world!', 0h          ; NOTE we have removed the line feed character 0Ah
-msg2    db      'This is how we recycle in NASM.', 0h  ; NOTE we have removed the line feed character 0Ah
+msg1    db      'Hello, brave new world!', 0x0          ; NOTE we have removed the line feed character 0xA
+msg2    db      'This is how we recycle in NASM.', 0x0  ; NOTE we have removed the line feed character 0xA
 
 SECTION .text
 global  _start
