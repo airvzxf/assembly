@@ -84,4 +84,7 @@ ld -m elf_i386 26-file_handling_close.o -o out_26-file_handling_close
 nasm -f elf32 -g -Fdwarf 27-file_handling_seek.asm
 ld -m elf_i386 27-file_handling_seek.o -o out_27-file_handling_seek
 
+nasm -f elf32 -g -Fdwarf 28-file_handling_delete.asm
+ld -m elf_i386 28-file_handling_delete.o -o out_28-file_handling_delete
+
 rm -f *.o
