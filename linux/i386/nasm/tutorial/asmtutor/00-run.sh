@@ -145,4 +145,3 @@ echo ""
 echo "Lesson 28 | File Handling - Delete"
 echo "------------------------------------------------------------"
 ./out_28-file_handling_delete
-rm -f readme.txt
