@@ -56,3 +56,88 @@ echo ""
 echo "Lesson 11 | Count to 10 (itoa)"
 echo "------------------------------------------------------------"
 ./out_11-count_to_10_itoa
+
+echo ""
+echo "Lesson 12 | Calculator - addition"
+echo "------------------------------------------------------------"
+./out_12-calculator_addition
+
+echo ""
+echo "Lesson 13 | Calculator - subtraction"
+echo "------------------------------------------------------------"
+./out_13-calculator_subtraction
+
+echo ""
+echo "Lesson 14 | Calculator - multiplication"
+echo "------------------------------------------------------------"
+./out_14-calculator_multiplication
+
+echo ""
+echo "Lesson 15 | Calculator - division"
+echo "------------------------------------------------------------"
+./out_15-calculator_division
+
+echo ""
+echo "Lesson 16 | Calculator atoi"
+echo "------------------------------------------------------------"
+./out_16-calculator_atoi 20 1000 317
+
+echo ""
+echo "Lesson 17 | Namespace"
+echo "------------------------------------------------------------"
+./out_17-namespace
+
+echo ""
+echo "Lesson 18 | Fizz Buzz"
+echo "------------------------------------------------------------"
+./out_18-fizz_buzz
+
+echo ""
+echo "Lesson 19 | Execute Command"
+echo "------------------------------------------------------------"
+./out_19-execute_command
+
+echo ""
+echo "Lesson 20 | Process Forking"
+echo "------------------------------------------------------------"
+./out_20-process_forking
+
+echo ""
+echo "Lesson 21 | Telling the time"
+echo "------------------------------------------------------------"
+./out_21-telling_the_time
+
+echo ""
+echo "Lesson 22 | File Handling - Create"
+echo "------------------------------------------------------------"
+./out_22-file_handling_create
+rm -f readme.txt
+
+echo ""
+echo "Lesson 23 | File Handling - Write"
+echo "------------------------------------------------------------"
+./out_23-file_handling_write
+rm -f readme.txt
+
+echo ""
+echo "Lesson 24 | File Handling - Open"
+echo "------------------------------------------------------------"
+./out_24-file_handling_open
+rm -f readme.txt
+
+echo ""
+echo "Lesson 25 | File Handling - Read"
+echo "------------------------------------------------------------"
+./out_25-file_handling_read
+rm -f readme.txt
+
+echo ""
+echo "Lesson 26 | File Handling - Close"
+echo "------------------------------------------------------------"
+./out_26-file_handling_close
+
+echo ""
+echo "Lesson 27 | File Handling - Seek"
+echo "------------------------------------------------------------"
+./out_27-file_handling_seek
+rm -f readme.txt
