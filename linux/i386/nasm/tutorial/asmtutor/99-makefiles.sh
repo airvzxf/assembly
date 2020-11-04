@@ -87,4 +87,10 @@ ld -m elf_i386 27-file_handling_seek.o -o out_27-file_handling_seek
 nasm -f elf32 -g -Fdwarf 28-file_handling_delete.asm
 ld -m elf_i386 28-file_handling_delete.o -o out_28-file_handling_delete
 
+nasm -f elf32 -g -Fdwarf 29_35-sockets.asm
+ld -m elf_i386 29_35-sockets.o -o out_29_35-sockets
+
+nasm -f elf32 -g -Fdwarf 36-download_a_webpage.asm
+ld -m elf_i386 36-download_a_webpage.o -o out_36-download_a_webpage
+
 rm -f *.o

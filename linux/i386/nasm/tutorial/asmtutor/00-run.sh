@@ -145,3 +145,16 @@ echo ""
 echo "Lesson 28 | File Handling - Delete"
 echo "------------------------------------------------------------"
 ./out_28-file_handling_delete
+
+echo ""
+echo "Lesson 29 - 35 | Sockets"
+echo " -> Create, Bind, Listen, Accept, Read, Write and Close"
+echo "------------------------------------------------------------"
+./out_29_35-sockets &
+sleep 1
+curl http://localhost:9001 || (killall out_29_35-sockets && echo "Killed: out_29_35-sockets";)
+
+echo ""
+echo "Lesson 36 | Download a Webpage"
+echo "------------------------------------------------------------"
+./out_36-download_a_webpage
