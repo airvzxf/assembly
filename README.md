@@ -1,16 +1,20 @@
 # Assembly in Linux
 
-Some scripts about assembly in Linux
-
----
-
 [Linux](https://github.com/airvzxf/assembly/tree/master/linux):
 
 - Benchmarks.
 
   - [Fibonacci](https://github.com/airvzxf/assembly/tree/master/linux/benchmark/fibonacci). In mathematics, the Fibonacci numbers are the numbers in the following integer sequence.
 
-- Tutorials.
+- Information.
+
+  - GAS: GNU Assembler
+
+    - Book: Programming from the ground up - [Exercises](https://github.com/airvzxf/assembly/tree/master/linux/gas/programmingGroundUp).
+
+  - GDB: Debugger
+
+    - [Extensions and GUIs](https://github.com/airvzxf/assembly/tree/master/linux/debbuger/gdb).
 
   - NASM - i386.
 
